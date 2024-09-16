@@ -12,7 +12,7 @@
 
 /*--------------------------------------------------------------
 # General
---------------------------------------------------------------*/
+--------------adding class for changin the size of para "you can also"------------------------------------------------*/
 body {
   font-family: "Mulish", sans-serif;
   background: #15171e;
@@ -35,6 +35,7 @@ h4,
 h5,
 h6 {
   font-family: "Mulish", sans-serif;
+  color: white;
 }
 .txtsize12 {
   font-size: 12px;
@@ -165,6 +166,7 @@ h6 {
 
 .nav-menu > ul {
   display: flex;
+  /* align-items: center; */
 }
 
 .nav-menu > ul > li {
@@ -183,9 +185,22 @@ h6 {
   font-family: "Mulish", sans-serif;
 }
 
-.nav-menu a:hover,
+.nav-menu a small{
+  display: block;
+  color: rgba(194, 196, 190, 1);
+  font-size: 7px;
+  font-weight: normal;
+  text-align: left;
+
+}
+
+.nav-menu a:hover ,
 .nav-menu li:hover > a {
   color: #ff7a01;
+}
+.nav-menu .btn-primary:hover{
+  color: white;
+
 }
 .nav-menu.topheadnav li a img{
   height: 24px;
@@ -460,7 +475,7 @@ position: static !important;
 @media (max-width: 991px) {
   .get-started-btn {
     margin: 0;
-    padding: 6px 15px 7px 15px;
+    padding: 4px 10px 5px 10px;
   }
 }
 
@@ -718,9 +733,12 @@ text-align: center;
   background: #1a1c25;
   border-radius: 10px;
 }
-.grid-item>img{height: 40px;}
+.grid-item>img{
+  height: 40px;
+
+}
 .studentnum {
-  font-size: 32px;
+  font-size: 26px;
   color: #ff7a01;
   font-weight: 900;
   line-height: normal;
@@ -732,6 +750,12 @@ text-align: center;
   font-weight: normal;
   line-height: 24px;
   display: block;
+}
+@media (max-width: 1024px){
+  .studentnum {
+    font-size: 24px;
+    line-height: normal;
+  }
 }
 @media (max-width: 991px) {
   #hero {
@@ -761,17 +785,22 @@ text-align: center;
     font-size: 18px;
   }
   .studentnum {
-    font-size: 32px;
+    font-size: 18px;
     line-height: normal;
   }
+  .grid-item{
+    font-size: 12px;
+  }
+  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #hero h1,
   h1.headtxt {
     font-size: 28px;
     line-height: 36px;
   }
+  
   #hero h2,
   h2.subheadtxt {
     font-size: 18px;
@@ -837,6 +866,7 @@ section {
 .sectionblackbg .bannersubsection .cousecontent{
   bottom: -64px;
 }
+
 .section-bg .container,
 .lightbg {
   background-color: #1c1e25;
@@ -861,7 +891,7 @@ section {
   padding-right: 40px;
   color: #fff;
   margin: 0;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .section-title p,
 .section-title.left p {
@@ -1426,11 +1456,13 @@ padding: 5px 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     padding: 15px;
+    /* padding-left: 15px; */
     margin: 0 7px;
   }
-  .services .icon-box::after {
+  /* .services .icon-box::after {
     display: none;
-  }
+  } */
+
   .services .icon-box h4 {
     font-size: 14px;
   }
@@ -1588,6 +1620,24 @@ learning eco system
   font-weight: normal;
   line-height: normal;
 }
+@media (max-width: 1200px) {
+  .batchcardcontainer .mobileoverflowauto .col-md-3,
+  .batchcardcontainer .mobileoverflowauto .col-sm-4 {
+    min-width: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  .mobileoverflowauto {
+    overflow: auto;
+    flex-wrap: nowrap;
+  }
+  .mobileoverflowauto .col-4 {
+    min-width: 280px;
+  }
+  .batchcardcontainer .mobileoverflowauto .col-md-3 {
+    width: 300px;
+  }
+}
 @media (max-width: 991px) {
   .leaningcourse .tabpan {
     display: block;
@@ -1638,13 +1688,7 @@ learning eco system
   .leaningcourse .tab-content p {
     font-size: 12px;
   }
-  .mobileoverflowauto {
-    overflow: auto;
-    flex-wrap: nowrap;
-  }
-  .mobileoverflowauto .col-4 {
-    min-width: 280px;
-  }
+  
 }
 /*--------------------------------------------------------------
 # cource card
@@ -1758,7 +1802,7 @@ position: relative;
 .courselst h4 {
   color: #fff;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
 }
 .courselstarrow a {
@@ -1806,6 +1850,7 @@ position: relative;
   }
   .leaningcourse .box .boxcontainer h5,
   .courselst h4 {
+    width: 60vw;
     font-size: 13px;
   }
   .enrollstu,
@@ -1830,6 +1875,25 @@ position: relative;
     max-width: 80%;
     margin: 0 auto 30px auto;
   } */
+  .courselst h4 {
+    width: 55vw;
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px){
+  .services .icon-box::after {
+    /* position: absolute; */
+    /* content: ""; */
+    right: 0;
+    top: -21px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 0px ;
+    height: 1px;
+    width: 100%;
+  }
+  .services .icon-box:last-child:after {
+    display: block;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1837,6 +1901,10 @@ position: relative;
     max-width: 100%;
     margin: 0 auto 30px auto;
   } */
+  .courselst h4 {
+    width: 60vw;
+    font-size: 13px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1977,11 +2045,11 @@ position: relative;
     font-size: 18px;
     line-height: normal;
   }
-  .mobileodr1 {
-    order: 2;
-  }
+ /* .mobileodr1 {
+     order: 2; 
+  } */
   .mobileodr2 {
-    order: 1;
+    /* order: 1; */
     height: 340px;
   }
   .mobileodr2 h2.bigheading {
@@ -1990,7 +2058,22 @@ position: relative;
   .mobileodr1 h2.bigheading {
     display: none;
   }
+  .btndreamjobs{
+    min-width: 150px;
+    padding: 10px 15px;
+  }
 }
+
+/* adding sam */
+@media (max-width: 480px) {
+  
+  .btndreamjobs{
+    min-width: 130px;
+    padding: 10px 0px;
+  }
+}
+/*  */
+
 /*dream jobs css end*/
 /* blog section css start */
 .col-md-4 .blog-box {
@@ -2111,6 +2194,12 @@ position: relative;
   background: #fb8133;
 }
 @media (max-width: 991px) {
+  .courseitem .col-lg-6 .col-md-6.mt-4{
+  margin-top: 0 !important;
+ }
+ .grid-layout{
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+ }
   .blog .btn-primary {
     padding: 10px 15px 11px 15px;
     white-space: nowrap;
@@ -2146,6 +2235,16 @@ position: relative;
     font-size: 14px;
   }
   .promotionalbanner .container .closepromo{right: 10px;}
+  .mobileodr1 {
+    order: 2; 
+ }
+ .mobileodr2 {
+   order: 1;
+ }
+ .courseitem .col-lg-6 .col-md-6.mt-4{
+   margin-top: 1.5rem!important;
+ }
+ 
 }
 /* contact section css end*/
 /*--------------------------------------------------------------
@@ -2175,12 +2274,12 @@ position: relative;
   background: #1f222c;
   height: 60px;
   padding: 5px 30px;
-  margin-left: 30px;
+  margin-right: 30px;
   display: inline-flex;
   align-items: center;
 }
-.btnreview:first-child {
-  margin-left: 0;
+.btnreview:last-child {
+  margin-right: 0;
 }
 .btnreview .socialicon {
   min-width: 25px;
@@ -2411,7 +2510,7 @@ font-weight: 700;
     flex-basis: 25%;
 }
 .learncontent .servicesbox .icon-box h4{
-  font-size: 14px;
+  font-size: 10px;
 }
 .learncontent .servicesbox .icon-box::after {
   position: absolute;
@@ -2519,12 +2618,14 @@ width: 68px;
 .topplacement{
   position: relative;
 }
-.topplacement .icontp{
+/* .topplacement .icontp{
   position: absolute;
-  top: -75px;
-  left: 20px;
+  top: -70px;
+  left: -10px;
   z-index: 2;
-}
+  width: 14%;
+
+} */
 .marginB50{
   margin-bottom: 50px;
 }
@@ -2881,6 +2982,7 @@ border: 1px solid #373737;
 .smboxdetail{
   font-size: 14px;
   font-weight: 700;
+  color: white;
 }
 .smboxdetail span{
   display: block;
@@ -2964,18 +3066,114 @@ top: calc(50% - 25px);
 .mmaccordion h5{
   font-size: 14px;
 }
+.imgwidth100p{
+  width: 100%;
+}
   @media (min-width: 1200px){
     .dropdown .dropdown-menu.megamenu{
       max-width: 1140px;
       margin: 0 auto;
     }
+    .topplacement .icontp{
+      position: absolute;
+      top: -70px;
+      left: -10px;
+      z-index: 2;
+      width: 14%;
+      /* height: 30%; */
+    }
+   
     
   }
+  @media (max-width: 1200px) {
+    .btnreview {
+      padding: 5px 20px;
+      margin-right: 20px;
+    }
+    .btnreview:last-child {
+      margin-right: 0;
+    }
+    /* sam */
+    .topplacement .icontp{
+      position: absolute;
+      top: -70px;
+      left: -10px;
+      z-index: 2;
+      width: 17%;
+    }
+    
+    
+  }
+  @media (max-width: 1024px) {
+    #footer .footer-top .footer-contact p{
+      font-size: 12px;
+    }
+    .btnreview{
+      padding: 5px 15px;
+    }
+   
+  }
+  @media (max-width: 992px) {
+    .btnreview{
+      padding: 5px 10px;
+      margin-right: 0px;
+    }
+    .btnreview:last-child{
+      margin-right: 0;
+    }
+    #footer .footer-logo-social .social-links a {
+      font-size: 18px;
+    }
+    /* sam */
+    .topplacement .icontp{
+      position: absolute;
+      top: -60px;
+      left: -8px;
+      z-index: 2;
+      width: 19%;
+      /* height: 30%; */
+    }
+   
+  }
+
 @media (max-width: 767px) {
+  .placementcard{
+    flex: 0 0 150px;
+    }
+  .btnreview:last-child{margin-right: auto;}
+  .topplacementwrapper .section-title.left.marginB50{ margin-bottom: 60px;}
+  .learncontent .nav-tabs{
+    display: block;
+  }
+  .learncontent .nav-tabs .nav-item{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  /* sam */
+  .topplacement .icontp{
+    position: absolute;
+    top: -45px;
+    left: -5px;
+    z-index: 2;
+    width: 22%;
+    /* height: 30%; */
+  }
+  .learncontent .servicesbox{
+    margin: 15px 0 0 0;
+  }
   .mobilemenu .mmsmbox{
 max-width: 100%;
 flex-basis: 100%;
 margin-right: 0;
+  }
+  #sync1 .item{
+    display: block;
+  }
+  #sync1 .item .videocontainer,
+  #sync1 .item .topplacementright{
+    max-width: 100%;
+flex-basis: 100%;
+margin-left: 0;
   }
   .mobilemenu .mmsmbox .smboxdetail{
     color: #fff;
@@ -2990,6 +3188,9 @@ font-size: 14px;
   #footer .footer-bottom {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .eventworkshop .details-container .card iframe{
+  width: 100%;
   }
   .btnreview {
     display: flex;
@@ -3051,4 +3252,37 @@ font-size: 14px;
     display: block;
     float: right;
   }
+  .services .container > .section-title.left{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  /* sam */
+  .topplacement .icontp{
+    position: absolute;
+    top: -43px;
+    left: -6px;
+    z-index: 2;
+    width: 24%;
+    
+  }
+   
+
+}
+
+@media (max-width: 460px) {
+  /* sam */
+  .topplacement .icontp{
+    position: absolute;
+    top: -40px;
+    left: -2px;
+    z-index: 2;
+    width: 28%;
+   
+  }
+   
+
 }

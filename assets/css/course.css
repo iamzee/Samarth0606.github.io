@@ -63,12 +63,13 @@
   flex-basis: 22%;
   font-size: 16px;
   font-weight: 700;
-  margin: 0;
+  margin: 2px;
+  /* padding: 2px; */
   line-height: normal;
 }
 .cousecontent p.last{
   white-space: nowrap;
-  max-width: 36%;
+  max-width: 40%;
   flex-basis: 36%;
 }
 .cousecontent p.last b{
@@ -694,8 +695,8 @@ max-width: 100%;
 }
 .bluebannerimg .blueimg1,
 .bluebannerimg .blueimg3{
-position: relative;
-bottom: -40px;
+position: absolute;
+bottom: 0px;
 }
 .placeassistbg {
   background-image: url(../../assets/img/projectbg.svg);
@@ -918,13 +919,102 @@ padding: 16px;
 
 
 /*--------------------------------- adding samarth code ---------------------*/
-.batchfull button {
-  visibility: hidden ;
+.batchfull .wishlst button ,.batchfull .btncardgroup button{
+  /* visibility: hidden ; */
+  display: none;
 }
 
 .batchfull strong {
   visibility: hidden ;
 }
+
+/* .box .mentorpic img{
+  display: inline-block;
+} */
+.box .mentorpic .img_inline_block{
+  display: inline-block;
+}
+  /* ----------------------------------------------------------------------------- */
+  .control-btn {
+    background-color: rgb(238, 238, 238);
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .batchcardcontainer  .box .coursetype{
+    padding: 16px;
+    border-top: 1px solid #3B4254;
+    border-bottom: 1px solid #3B4254;
+    }
+    .batchcardcontainer  .box .coursetype h5{
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .batchcardcontainer  .box .coursetype .customradio{
+      margin-right: 20px;
+    }
+  .customradio{
+    position: relative;
+  }
+  .customradio.inlineFlex{
+    display: inline-flex;
+    align-items: center;
+  }
+  .customradio [type="radio"]:checked,
+  .customradio [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+      display: none;
+  }
+  .customradio [type="radio"]:checked + label,
+  .customradio [type="radio"]:not(:checked) + label{
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: normal;
+      font-size: 12px;
+      display: inline-block;
+      color: #fff;
+      margin: 0;
+  }
+  .customradio [type="radio"]:checked + label:before,
+  .customradio [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #666;
+      border-radius: 100%;
+      background: #666;
+  }
+  .customradio [type="radio"]:checked + label:after,
+  .customradio [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(90deg, #f26a3e 0%, #fb8133 100%);
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  .customradio [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  .customradio [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  /* ---------------------------------------------------------------------- */
+
 /*-------------------------------- added till here only ---------------------*/
 
 
@@ -1033,6 +1123,15 @@ width: auto;
 }
 .batchcardcontainer  .box .btncardgroup{
   padding-top: 0;
+}
+.batchcardcontainer  .box .btncardgroupmore{
+  /* padding:7px 39%; */
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center; */
 }
 .batchcardcontainer  .box .btncardgroup.tp16{
   padding-top: 16px;
@@ -1317,7 +1416,34 @@ color: #fff;
   content: '*';
   color: #ccc;
 }
+/* added here by samath and vijay sir */
+.batchcardcontainer  .box .pricedatail .pricepan,
+.batchcardcontainer  .box .pricedatail .wishlst{
+  max-width: 100%;
+  flex-basis: 100%;
+  margin-top: 8px;
+}
+
+
+/*  */
+@media (max-width: 1200px) {
+  .batchcontent .batchcardcontainer .mobileoverflowauto .col-sm-4 {
+    min-width: 340px;
+  }
+  /* added here by samath and vijay sir */
+  .batchcardcontainer  .box .pricedatail .pricepan,
+  .batchcardcontainer  .box .pricedatail .wishlst{
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  
+
+  /*  */
+}
 @media (max-width: 991px) {
+  .bluebanner h1{
+    font-size: 40px;
+  }
   .courseoverview .row .col-md-8{order: 2;}
   .courseoverview .row .col-md-4{order: 1;}
   .courseaside{position: static;margin-bottom: 30px;}
@@ -1325,13 +1451,43 @@ color: #fff;
   .learningboxcontainer{
     flex-wrap: wrap;
   }
-  .learnbox{
-    max-width: 50%;
-    flex-basis: 50%;
+
+  /* added here by samath and vijay sir */
+  .batchcardcontainer  .box .pricedatail .pricepan,
+  .batchcardcontainer  .box .pricedatail .wishlst{
+    max-width: 100%;
+    flex-basis: 100%;
   }
   
+
+  /*  */
+
+  .learnbox{
+    max-width: 46%;
+    flex-basis: 46%;
+    margin: 0 8px;
+  }
+  .bannersubsection{
+    max-width: 100%;
+  }
+  .bluebannerimg .blueimg1, 
+  .bluebannerimg .blueimg3{
+position: absolute;
+  }
+  .bluebannerimg .blueimg3{
+    right: 6%;
+  }
+  .lstcompany .txthead{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
 }
 @media (max-width: 767px) {
+  .contactno .iconcall,
+  .emailinfo .iconemail{
+    position: static;
+  }
   .batchcardcontainer .mobileoverflowauto .col-6{
 max-width: 365px;
 flex-basis: 365px;
@@ -1339,10 +1495,17 @@ flex-basis: 365px;
   .learningboxcontainer{
     flex-wrap: wrap;
   }
-  .learnbox{
+
+  /* added here by samath and vijay sir */
+  .batchcardcontainer  .box .pricedatail .pricepan,
+  .batchcardcontainer  .box .pricedatail .wishlst{
     max-width: 100%;
     flex-basis: 100%;
   }
+  
+
+  /*  */
+  
   .topcompanywrapper .lstcompany{
     display: block;
   }
@@ -1358,6 +1521,7 @@ flex-basis: 365px;
   }
   .bluebannerimg{
     position: static;
+    top: 0;
   }
   .bluebannerimg .blueimg1,
 .bluebannerimg .blueimg3{
@@ -1389,7 +1553,7 @@ bottom: 85px;
   .procard .procardcontent h5{font-size: 10px;}
   .cousecontent p > span,
   .procard .procardcontent span,
-  .procard .procardcontent p{font-size: 8px;}
+  .procard .procardcontent p{font-size: 10px;}
   .cousecontent .feedbackstar{width: 12px;}
   .syllabus .header .left,
   .projectpan .right h4{font-size: 16px;}
@@ -1410,12 +1574,21 @@ bottom: 85px;
   .faq .faq-list a.collapse{font-size: 14px;}
   .faq .faq-list p{font-size: 12px;}
   .frequentlycontainer{padding: 15px 15px 30px 15px;display: block;}
-  .frequentlycontainer .row .col-6,
-  .leaningcourse .row .col-4{min-width: 280px;}
+  .frequentlycontainer .row .col-6{min-width: 280px;}
   .faqtotalprice{margin-left: 0;position: static;max-width: 100%;margin-top: 20px;padding: 10px 15px;}
   .faqtotalprice h4 small,
   .faqtotalprice h4 del{font-size: 12px;}
   .faqtotalprice h4{font-size: 14px;}
   .faqtotalprice .btn-secondary{padding: 6px 14px 7px 14px;font-size: 14px;}
+  .franchisefrm{
+    padding: 15px;
+  }
 }
 
+@media (max-width: 480px){
+  .learnbox{
+    max-width: 100%;
+    flex-basis: 100%;
+    margin: 0;
+  }
+}

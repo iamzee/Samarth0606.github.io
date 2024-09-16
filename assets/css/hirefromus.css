@@ -202,16 +202,18 @@ color: #fff;
   width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    /* overflow-x: auto; */
 }
 .emprole .emprolebox{
   background: #15171E;
 border-radius: 6px;
-padding: 15px;
+padding: 5px;
 color: #fff;
 font-size: 15px;
 display: flex;
 flex-direction: column;
 max-width: 18%;
+/* width: 100%; */
 flex-basis: 18%;
 margin: 1%;
 border: 1px solid transparent;
@@ -247,10 +249,40 @@ color: #fff;
   border: 0;
   color: #ccc;
 }
+@media (max-width: 1200px) {
+  .lstcompany .lstbrandlogo{
+    overflow: auto;
+  }
+}
 @media (max-width: 991px) {
   .courseoverview .row .col-md-8{order: 2;}
   .courseoverview .row .col-md-4{order: 1;}
   .hireusbanner .bannerimg{align-items: center;}  
+
+  .emprole .emprolebox{
+    max-width: 31%;
+    flex-basis: 31%;
+  }
+
+  .hirefrombox .icon-box {
+    border: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+    padding: 0;
+}
+.services .icon-box::after{
+  right: 17px;
+}
+
+.hirefrombox .icon-box{  
+  padding-right: 25px !important;
+}
+
+.hirefrombox .icon-box:nth-child(2):after,.hirefrombox .icon-box:nth-child(6):after{
+  border-right-width:0;
+}
+
+
 
 }
 @media (max-width: 767px) {
@@ -261,7 +293,7 @@ color: #fff;
     position: static;
     margin-top: 20px;
   }
-  .hirefrombox .icon-box{border: 0;max-width: 100%; flex-basis: 100%;padding: 0;}
+  .hirefrombox .icon-box{border: 0;max-width: 50%; flex-basis: 50%;padding: 0;}
   .marginT20P{margin-top: 0;}
   .width75Percent{ width: 100%; text-align: center;}
   .topcompanywrapper .lstcompany{
@@ -275,10 +307,10 @@ color: #fff;
     margin-right: 0;
     margin-bottom:20px;
   }
-  .lstcompany .lstbrandlogo{
+  /* .lstcompany .lstbrandlogo{
     overflow: auto;
-  }
-
+  } */
+  
   .procardMT80,
   .procardMT160{
     margin-top: 0;
@@ -292,5 +324,18 @@ color: #fff;
   .talentpoolpan .right h5{font-size: 13px; margin-top: 10px;}
 
   .servicesbox{margin-left: 15px;}
+  .hireusbanner .hireusimg{
+width: 100%;
+  }
+  .emprole .emprolebox{
+    max-width: 48%;
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hirefrombox .icon-box{border: 0;max-width: 100%; flex-basis: 100%;padding: 0;}
+  .servicesbox{margin-left: 0px;}
+
 
 }
